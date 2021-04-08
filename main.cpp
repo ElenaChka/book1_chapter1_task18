@@ -1,4 +1,4 @@
-//// Программа, в которой создается массив и заполняется числами Фибоначчи
+// Программа, в которой создается массив и заполняется числами Фибоначчи
 #include <iostream>
 using namespace std;
 int main ()
@@ -10,7 +10,7 @@ int main ()
     cout << " Dopustimiy diapazon colichestva shisel ot 1 do 92" << endl;
     cout << " Vvedite colichectvo chisel ";
     cin >> colichestvo;
-    if ( colichestvo < 1 || colichestvo > 92) //and ( colichestvo > 92))
+    while ( colichestvo < 1 || colichestvo > 92)
     {
       cout << " Vveli nedopustimoe chislo"<< endl;
       cout << " Vvedite colichestvo chisel ";
@@ -28,11 +28,10 @@ int main ()
       }
     if ( colichestvo > 2)
     {
-   // long long int massivFibonachi [ colichestvo];
-     for ( int n = 2; n < colichestvo; n ++)
-     {
         massivFibonachi [0] =1;
         massivFibonachi [1] =1;
+     for ( int n = 2; n < colichestvo; n ++)
+     {
         c = a + b;
         massivFibonachi [n] = c;
         a = b;
@@ -43,5 +42,4 @@ int main ()
      {
        cout  << i << " element massiva = " << massivFibonachi [i] << endl;
      }
-
 }
